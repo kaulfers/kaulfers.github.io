@@ -17,6 +17,7 @@ function checkUserLogIn(event) {
     
     let enteredUserName = userNameInput.value;
     let enteredPassword = passwordInput.value;
+    console.log("username: " + userNameInput.value + "    pw: " + passwordInput.value)
 
     if (!enteredUserName || !enteredPassword) {
         welcomeMessage.innerHTML = "Please enter your information";
