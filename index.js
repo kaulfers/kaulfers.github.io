@@ -20,7 +20,9 @@ function checkUserLogIn(){
         if (userConst[0] === userName && userConst[1] === password){
             user = userConst;
             document.getElementById("welcomeMessage").innerHTML = "Welcome" + user[0];
+            return;
         }
-    }    
+    }
+    document.getElementById("welcomeMessage").innerHTML = "wrong user information"
 
 }
