@@ -12,7 +12,9 @@ let userInformation = [
     { username: "john", password: "abc" }
 ];
 
-function checkUserLogIn() {
+function checkUserLogIn(event) {
+    event.preventDefault();  // Prevent form submission
+    
     let enteredUserName = userNameInput.value;
     let enteredPassword = passwordInput.value;
 
