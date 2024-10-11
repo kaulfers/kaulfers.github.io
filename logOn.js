@@ -1,25 +1,33 @@
 let user = null;
-let welcomeMessage = document.getElementById("welcomeMessage")
+let welcomeMessage = document.getElementById("welcomeMessage");
 
-let logInButton = document.getElementById("logInButton")
-logInButton.addEventListener("click", checkUserLogIn)
+let logInButton = document.getElementById("logInButton");
+logInButton.addEventListener("click", checkUserLogIn);
 
-let userName = document.getElementById("userName")
-let password = document.getElementById("password")
+let userNameInput = document.getElementById("userName");
+let passwordInput = document.getElementById("password");
 
-let userInformation = [("tim", "abc"), ("john", "abc")]
+let userInformation = [
+    { username: "tim", password: "abc" },
+    { username: "john", password: "abc" }
+];
 
-function checkUserLogIn(){
-    for (const userConst of userInformation){
-        if (user === null){
-            welcomeMessage.innerHTML = "please enter your information"
-        }
-        if (userConst[0] == userName && userConst[1] == password){
-            user = userConst;
-            welcomeMessage.innerHTML = "Welcome" + user[0];
+function checkUserLogIn() {
+    let enteredUserName = userNameInput.value;
+    let enteredPassword = passwordInput.value;
+
+    if (!enteredUserName || !enteredPassword) {
+        welcomeMessage.innerHTML = "Please enter your information";
+        return;
+    }
+
+    for (const userObj of userInformation) {
+        if (userObj.username === enteredUserName && userObj.password === enteredPassword) {
+            user = userObj;
+            welcomeMessage.innerHTML = "Welcome " + user.username;
             return;
         }
     }
-    welcomeMessage.innerHTML = "wrong user information"
 
+    welcomeMessage.innerHTML = "Wrong user information";
 }
