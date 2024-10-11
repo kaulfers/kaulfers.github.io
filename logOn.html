@@ -8,9 +8,11 @@
     <body>
         <div>
             <p id="welcomeMessage"></p>
-            user name: <textarea id="userName"></textarea><br/>
-            password: <textarea id="password"></textarea><br/>
-            <button id='logInButton'>log in</button><br/>
+            <form>
+                user name: <textarea id="userName" aria-label="userName"></textarea><br/>
+                password: <textarea id="password" aria-label="password" type="password"></textarea><br/>
+                <button id='logInButton'>log in</button><br/>
+            </form>
             <button id="createNewUser">new user</button><br/>
             <button id="forgotPassword">forgot password</button><br/>
             <a href="index.html">back to start</a>
