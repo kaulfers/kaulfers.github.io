@@ -14,7 +14,7 @@ function checkUserLogIn(){
         if (user === null){
             welcomeMessage.innerHTML = "please enter your information"
         }
-        if (userConst[0] === userName && userConst[1] === password){
+        if (userConst[0] == userName && userConst[1] == password){
             user = userConst;
             welcomeMessage.innerHTML = "Welcome" + user[0];
             return;
