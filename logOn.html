@@ -11,7 +11,10 @@
             
             <form>
                 user name: <textarea id="userName" aria-label="userName"></textarea><br/>
-                password: <textarea id="password" aria-label="password" type="password"></textarea><br/>
+                <form>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </form>
                 <button id='logInButton'>log in</button><br/>
             </form>
             <button id="createNewUser">new user</button><br/>
