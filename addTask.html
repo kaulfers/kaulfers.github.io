@@ -9,18 +9,18 @@
         <h2>Add task</h2>
         Here you can add a task <br/><br/>
         <form>
-            Name*: <textarea id="name"></textarea><br/>
-            Module: <textarea id="module"></textarea><br/>
-            Deadline*: <input type="datetime-local" id="deadline" name="deadline"><br/>
-            Recipient: <textarea id="recipient"></textarea><br/>
-            Location*: <textarea id="location"></textarea><br/>
-            Team-Members*: <textarea id="teamMembers"></textarea><br/>
-            Priority*: high<input type="checkbox" id="priorityHigh" value="prioHigh"> medium<input type="checkbox" id="priorityMedium" value="prioMedium"> low<input type="checkbox" id="priorityMedium" value="prioLow"><br/>
-            Type*: <textarea id="type"></textarea><br/>
-            Grade: <textarea id="type"></textarea><br/>
-            Status*:<input type="checkbox" id="status" name="statusSuccess" value="success"><br/>
+            <label for="name">Name*:</label> <input type="text" id="name" name="name"><br/>
+            <label for="module">Module*: </label> <input type="text" id="module" name="module"><br/>
+            <label for="deadline">Deadline*:</label> <input type="text" id="deadline" name="deadline"><br/>
+            <label for="recipient">Recipient:</label> <input type="text" id="recipient" name="recipient"><br/>
+            <label for="location">Location*:</label> <input type="text" id="location" name="location"><br/>
+            <label for="teamMembers">Recipient:</label> <input type="text" id="teamMembers" name="teamMembers"><br/>
+            Priority*: <datalist></datalist><br/>
+            Type*: <datalist></datalist><br/>
+            Grade: <textarea></textarea><br/>
+            Status*:<input type="">
             Expected Duration*: <input type="time" id="expectedDuration" name="expectedDuration"><br/>
-            <button id="addButton">Press Add</button>
+            <button id="addButton">Press Add</button><br/>
         </form>
         <a href="index.html">back to startpage</a>
     </body>
