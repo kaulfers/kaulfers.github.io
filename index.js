@@ -1,7 +1,19 @@
-function displayHelloWorld(){
-    document.getElementById("helloWorld").innerHTML = "Hello World";
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const board = document.getElementById("board");
 
-let button = document.getElementById("helloWorldButton");
-button.addEventListener("click", displayHelloWorld);
+    for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+            const square = document.createElement("div");
+            square.classList.add("square");
 
+            // Alternate colors
+            if ((row + col) % 2 === 0) {
+                square.classList.add("white");
+            } else {
+                square.classList.add("black");
+            }
+
+            board.appendChild(square);
+        }
+    }
+});
